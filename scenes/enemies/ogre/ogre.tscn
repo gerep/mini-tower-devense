@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://jd803cvj3ccb"]
+
+[ext_resource type="Script" uid="uid://cqxjjwgi1585q" path="res://scenes/enemies/ogre/ogre.gd" id="1_1tapf"]
+[ext_resource type="Texture2D" uid="uid://ijiromh177kx" path="res://assets/enemy.png" id="2_j07wg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e3ao"]
+size = Vector2(32, 32)
+
+[node name="Ogre" type="CharacterBody2D"]
+script = ExtResource("1_1tapf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j07wg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8e3ao")
+disabled = true

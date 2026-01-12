@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b72jqjamr4ttb"]
+
+[ext_resource type="Script" uid="uid://6tlxlxnpx5lt" path="res://scenes/enemies/wild_dog/wild_dog.gd" id="1_nvhnf"]
+[ext_resource type="Texture2D" uid="uid://ijiromh177kx" path="res://assets/enemy.png" id="2_dtfcg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e3ao"]
+size = Vector2(32, 32)
+
+[node name="WildDog" type="CharacterBody2D"]
+script = ExtResource("1_nvhnf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("2_dtfcg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8e3ao")
+disabled = true
